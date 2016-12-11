@@ -14,6 +14,6 @@ COPY ./src /src
 ENV PREFIX=/usr
 ENV PYTHON=/usr/bin/python
 
-RUN cd /src &&
-    make
+RUN cd /src  \
+  && make
 
