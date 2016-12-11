@@ -12,8 +12,8 @@ test: test2.so
 	 ./run.sh
 
 test2.so: Makefile test.cpp
-	clang++ ${CXXFLAGS} ${PY2FLAGS} -DMODULE_NAME=test2 -c test.cpp -o test2.o
-	clang++ ${LDDFLAGS} -o test2.so test2.o  ${PY2LIBS}
+	c++ ${CXXFLAGS} ${PY2FLAGS} -DMODULE_NAME=test2 -c test.cpp -o test2.o
+	c++ ${LDDFLAGS} -o test2.so test2.o  ${PY2LIBS}
 
 
 clean:
