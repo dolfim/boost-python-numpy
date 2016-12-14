@@ -1,10 +1,10 @@
 CXXFLAGS = -std=c++11 -g -fPIC 
-LDDFLAGS = -std=c++11 -g -bundle 
+LDDFLAGS = -std=c++11 -g -shared
 
 PY2ROOT = ${PREFIX}
 BOOST2ROOT = ${PREFIX}
 PY2FLAGS = -I${PY2ROOT}/lib/python2.7/site-packages/numpy/core/include -I${PY2ROOT}/include/python2.7 -I${BOOST2ROOT}/include
-PY2LIBS = ${BOOST2ROOT}/lib/libboost_python.dylib ${PY2ROOT}/lib/python2.7/config/libpython2.7.a
+PY2LIBS = ${BOOST2ROOT}/lib/x86_64-linux-gnu/libboost_python.so ${PY2ROOT}/lib/python2.7/config-x86_64-linux-gnu/libpython2.7.so
 
 all: test2.so test
 
